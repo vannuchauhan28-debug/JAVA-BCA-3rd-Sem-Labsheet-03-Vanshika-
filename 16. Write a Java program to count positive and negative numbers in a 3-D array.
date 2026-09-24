@@ -1,0 +1,37 @@
+#CODE
+import java.util.Scanner;
+public class PositiveNegative3D {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][][] arr = new int[2][2][2];
+        int positive = 0, negative = 0;
+        System.out.println("Enter 8 elements:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    arr[i][j][k] = sc.nextInt();
+                    if (arr[i][j][k] > 0) {
+                        positive++;
+                    } else if (arr[i][j][k] < 0) {
+                        negative++;
+                    }
+                }
+            }
+        }
+        System.out.println("Positive numbers: " + positive);
+        System.out.println("Negative numbers: " + negative);
+        sc.close();
+    }
+}
+#OUTPUT
+Enter 8 elements:
+10
+-5
+20
+-8
+15
+-3
+7
+-2
+Positive numbers: 4
+Negative numbers: 4
